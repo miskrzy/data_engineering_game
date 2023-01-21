@@ -1,23 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Processor : MonoBehaviour
+public abstract class Processor : MonoBehaviour
 {
-    public List<GameObject> elements;
+    public abstract bool canProvide();
 
-    public void doProcessing()
-    {
-        Debug.Log("doing processing");
-    }
+    public abstract bool canConsume();
 
-    public void consumeElement()
-    {
+    public abstract void consumeElement(GameObject element);
 
-    }
-
-    public void provideElement()
-    {
-
-    }
+    public abstract GameObject provideElement();
 }
